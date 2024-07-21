@@ -1,0 +1,43 @@
+//Desafio 3 : Verificar se a lista é crescente, descrente ou nenhum deles.
+
+#include <iostream>
+using namespace std;
+
+int main(){
+//declaração de variável
+
+int lista[5] = {9,8,7,5,3};
+bool check_crescente = true;
+bool check_decrescente = true;
+
+//verificando a lista
+
+for(int i = 0; i < 4; i++) 
+{
+    if (lista[i]<lista[i+1])
+        {
+        cout<<lista[i]<<" menor que "<<lista[i+1]<<" : crescente "<<endl;
+        check_decrescente = false;
+        }
+        else if (lista[i]>lista[i+1])
+        {
+            cout<<lista[i]<<" maior que "<<lista[i+1]<<" : decrescente "<<endl;
+            check_crescente = false;
+        }
+        // a Filha da putagem aqui é que não se deve comparar os números, mas sim a situação. A LISTA É ou NÃO é crescente ou decrescente?? aí sim vc imprime a situação dela. 
+}
+cout<<endl;
+if (check_crescente == true)
+    {
+    cout<< "Lista Crescente!";
+    }
+    else if (check_decrescente == true) 
+    {
+        cout<< "Lista Decrescente!";
+    }
+    else
+    {
+        cout<<"Nenhum dos 2"<<endl;
+    }
+    return 0;
+}
