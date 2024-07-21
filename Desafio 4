@@ -1,0 +1,24 @@
+//Desafio 4: "Dada uma lista de numeros, seu programa deve encontrar qual eh o menor numero que aparece na lista."
+
+#include <iostream>
+using namespace std;
+
+int main () {
+
+    //declaração de variáveis
+    int lista[5] ={5,6,7,1,9};
+    int atualizacao = lista[0]; //para comparar a posição inicial da lista
+
+    for(int i = 1; i < 5; i++ ) // foi necessário começar pelo segundo item da lista, pois a atualização sempre vai receber o primeiro item da lista na primeira comparação
+    
+    {
+        cout<< "comparacao "<<atualizacao<< " e "<<lista[i]<<endl;
+        if(lista[i]<atualizacao)// aqui eu comparei o segundo item da lista, diretamente com o primeiro, pois se ele for o menor, já atualiza a variável.
+            {
+            atualizacao = lista[i]; //a variavel menor sempre será alocada aqui e irá atualizando conforme for a menor.
+            }
+        cout<<"O menor numero eh: "<<atualizacao<<endl; // imprime o resultado 
+    }
+    
+    return 0;
+}
