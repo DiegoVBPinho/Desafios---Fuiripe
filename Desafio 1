@@ -1,0 +1,39 @@
+// Desafio 1 : Verificar quais itens do vetor 1, estão dentro do vetor 2.
+
+
+#include <iostream>
+using namespace std;
+
+int main() {
+
+    // declaração de variáveis
+    int lista_1[5] = {5, 6, 7, 8, 9};
+    int lista_2[5] = {8, 10, 15, 20, 7};
+    
+    // acessar e imprimir os itens da lista
+    for(int i = 0; i < 5; i++) 
+    {
+        cout << lista_2[i] << "---" << endl;
+
+        bool check = false;
+        for(int j = 0; j < 5; j++) 
+        {
+            cout << lista_1[j] << endl;
+
+            if(lista_1[j] == lista_2[i]) 
+            {
+                check = true;
+                cout<< " [ "  << lista_2[i]<< " ] " << " MATCH" << endl;
+                break;
+            }
+
+        }
+        if (check==false)
+        {
+            cout << " [ " <<lista_2[i]<< " ] "<< " NO MATCH " << endl;
+        
+        }
+    }
+    cout << endl;
+    return 0;
+}
