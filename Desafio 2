@@ -1,0 +1,27 @@
+
+// Desafio2 : Verificar se um vetor está ordenado de forma crescente.
+
+
+#include <iostream>
+using namespace std;
+
+int main() {
+
+    // declaracaoo de variaveis
+    int lista_1[5] = {5, 6, 7, 12, 9};
+    
+    //Percorrendo um vetor
+    for (int i = 0; i < 5 ; i++)
+    {
+        if (lista_1[i] > lista_1[i+1])
+        {  
+            cout <<lista_1[i]<<" maior que "<< lista_1[i+1] <<" : -- Vetor 1 nao esta ordenado em crescente. --"<<endl;
+            break;
+            }else
+            {
+                cout<< lista_1[i]<<endl;
+            }
+    
+    }
+    return 0;
+}
