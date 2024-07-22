@@ -1,0 +1,31 @@
+//Dada uma lista de numeros, troque de lugar o numero da posicao 0 da lista com o numero da posicao k. Onde k eh a posicao da lista que tem o menor numero da lista.
+//ex:
+//lista = [3 2 5 1 4 7]
+
+#include <iostream>
+using namespace std;
+int main(){
+//declaração de variaveis
+            //  0 1 2 3 4 4
+int lista[6] = {3,2,5,1,4,7};
+int atualiza = lista[0]; // recebe a primeira posição do vetor
+int armazena_posicao = 0;
+    for (int i = 1; i < 6; i++) // já inicia na segunda posição do vetor, para poder comparar a VAR_Atualiza com a lista[i]
+    {
+        if(lista[i] < atualiza)
+        {
+        atualiza = lista[i];
+        armazena_posicao = i;
+        }
+    }
+    cout<< "o menor valor eh: " << atualiza<<endl; // foi encontrado o menor valor dentro da lista.
+    cout<< "a posicao eh: "<<armazena_posicao<<endl; // Foi encontrada a posição do menor valor.
+    //agora é necessário trocar a lista[0] com a lista[armazena_posicao].
+    swap (lista[0], lista[armazena_posicao]);
+    
+    for (int j = 0; j < 6; j++)
+    {
+        cout<<lista[j];
+    }
+    return 0;
+}
